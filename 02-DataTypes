@@ -1,0 +1,38 @@
+
+
+In Other Languages we should declare the Data Type But in Python It doesnot needed to declare the python default know according to syntax of the data written
+
+to know the type of data    :   type(variable_name)
+
+=>  we use   ' '  or " "  for String  data type
+
+=>  Either True  or False is said to be Boolean
+
+=>  []  : used for storing List of data
+
+=>  ()  : used for tuple  
+
+=>  In python we retrive  , Load , Read , data even without using the print function BCZ of  >>>  known as REPL  
+    R - Read   ,  E - Evaluate ,  P - Print , L - Load
+    
+ But while performing python  offline  we must use print function
+ 
+=>  we use list to store multiple data like  : data = [ "eric" , "tom" , 12453 , "good"]
+    
+    
+      we can retrieve particular  data according to index  number in a  list  like   eric = data[0] , good = data[-1]
+      
+      we can perform slicing operator on the list  :   data[0:2] gives  ["eric"  , "tom"]  
+      
+        syntax for slicing list 
+                  variable_name [ from : to ]   
+                  
+                  Note : the data given only till the index number mentioned not including the  value of that index number 
+
+=> the slicing operator run the .__getitem__() function behind   to produce sliced output
+
+=> but to perform slicing in column wise the list type doesnot support for such case we use Array kind of data
+
+=>  to convert the list to array we use  :  numpy.array(variable)
+
+=>  python bydefault provide error for some commands when we run from other path in which that command doesnot exist
