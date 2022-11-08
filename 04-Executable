@@ -1,0 +1,84 @@
+
+
+=>  sequence of characters becomes sring 
+
+=> alt + enter is the shortcut to get next cell in Jupyter notebook
+
+the slicing syntax of an  Array
+      variablename[from : to : jump , index of column ]
+
+Bydefault the slicing operator perform jump as 1  
+
+reversing the data using the slicing can be done by   :   varname[-1 : : -1]
+
+we use   in  operator   to find some value in the data
+    ex  :   data = [ "kanna" , "tom" , "clarie" , "bob"]
+    
+    kanna    in    data     -  it gives  output as true
+    
+    we can use pre-defined functions of python to a variable such as  
+          varname.upper()   , varname.lower() , varname.capitalize()  
+          
+    we can use   or , and operator in the condition of loops  . or used for either conditions , and used  to run only if both are true
+    
+    
+    Technologies like  Cloud , DevOps and many other work on API 
+    
+    So the python can be able to run on API to use python as language in such technologies 
+    
+    
+   for such we setup RHEL  in Virtual Box 
+   
+   
+   instead notepad we use gedit in rhel
+   
+   Running in  API is such as running the file in other OS without logging in to it 
+   
+    for such case we set or configure CGI ( Common Gatewat Interface ) that run the process on behalf us instead allowing us to login 
+    
+                                          CONFIGURING CGI     
+    
+    
+      yum install  httpd  -y 
+      
+      systemctl start httpd 
+      
+      The httpd server  run the file that present in the folder /var/www/html
+      
+      to run the file as a command   that means to make a file executable    we should create the file in a folder /var/www/cgi-bin/
+      
+      for giving the permission of execute to a file use command 
+      
+          chmod +x  file.py
+          
+          
+      To specify the type of code in the file so as to use that particular interpreter we define   the code by shebang / hashbang  in code 
+      
+      
+      ex :  kanna.py
+      
+      #!/usr/bin/python3
+      print("content-type:text/html")
+      print()
+      
+          print("this is run from a  file")
+          
+          
+    kanna.py     gives the output     where it run as a command like date , cal
+    
+    to access the resourses of OS  we imported OS and used system function it  for similar operation we can use  subprocess module
+    
+          import subprocess 
+          subprocess.getoutput("")
+          
+          
+    API   -  Application Program Interface
+    
+   URL    - Uniform Resource Location 
+   
+   
+      
+      
+              
+      
+    
