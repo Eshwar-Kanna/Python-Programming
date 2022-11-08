@@ -1,0 +1,36 @@
+
+                     >>>           
+      
+      Python         file
+      
+                     IDE  - Integrated Dev Env  ( Jupyter Notebook)
+                     
+                     
+                     
+    Mathematical Operations can be run on REPL
+    
+        LAUNCHING RESOURSES OF OS USIND PYTHON
+        
+        
+        import os
+        os.system("chrome")
+        
+ Note :  set the path of chrome in Env variables to run from any path 
+ 
+ 
+ input() function is used to get or ask the input from the user and store in a  variable
+ 
+ b = input("enter value :")       when we run it gives a prompt Bu displaying   enter value 
+ 
+ To provide the tab space between the lines when we use multiple statement in the code we use    \t
+ 
+ 
+ To provide the new line between the lines when we use multiple statement in the code we use      \n
+ 
+ for the indention of any function   in other languages we use   {}  but in python we use   :
+ 
+ the value from input function bydefault stores as string but to convert we can specify the type to convert  like  a = int(input())
+ 
+ 
+ 
+ 
