@@ -1,0 +1,35 @@
+
+
+                                                                WHY  PYTHON
+ 
+ 
+ Automation tools like Ansible , Terraform , Data Science , Jenkins , Bigdata , Mobile UI  , Cloud Computing , IOT  and  Augmented Reality   . To integrate or make communication to one another we require a unique language where mostly used Python
+ 
+ 
+ There  are many softwares and palatforms to use python or write python code but here we use  Anaconda jupyter
+ 
+ to check the version of python pre installed in os   
+                python  -v 
+                
+  print()  is used to display the output 
+  
+  exit() is used to  terminate the python shell
+  
+  though we are running python software on the os  we can operate the resources of OS using python modules or libraries
+  
+         OS  , pyttsx3 , subprocess 
+         
+        os.system("notepad")     -    it will open the notepad 
+        pyttsx3.speak("welcome")  -   it access to speaker and provide voice output
+        
+        
+        
+  We can run the code offline and online  
+  OFFLINE - writing script in file and run python3 <file>.py     
+  ONLINE - open python shell and write command  (INTERPRETING)  Runs LINE BY LINE
+  
+  We have limited languages that can be used both online and offline  in which python is one 
+  
+  
+  When an app is stored in HardDisk then it said to ba a Program 
+  when the app launched and load on RAM said to be Process
