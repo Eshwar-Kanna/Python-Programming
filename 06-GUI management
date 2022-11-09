@@ -1,0 +1,34 @@
+
+
+Redirection is the process of autofarwarding URL when we type related url
+
+Launching a GUI app by typing its name on the text box and submiting it 
+
+to open the GUI app we use  a library called webbrowser 
+
+  import webbrowser
+  webbrowser.open("url")
+  
+   for Voice controll  we use a library called pyaudio   
+   conda install pyaudio
+   for converting voice to english phrase we use speechrecognition
+   
+   
+   import speechrecognition as sr 
+   r = sr.recognizer()
+   sr.microphone()
+   with sr.microphone() as source:
+   r.listen(sourse)
+   r.recognize_google(audio)
+   
+   
+   
+echoback is the function that runs behind and trace the curser every instant 
+
+echo $?   -  this command gives the output as either 0 or 1  to verify wheather the previous command returned error or an output 
+        if this command returns  0  then the previous command produced a output else its an error
+        
+subprocess.getstatusoutput("date")  it gives 0 for status and produce output 
+
+
+List is mutable and tuple is immutable  since tuple have only read access 
