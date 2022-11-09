@@ -1,0 +1,56 @@
+gedit docker.py
+
+
+      import subprocess as sp
+      cmd = "docker run -it --name os1 ubuntu:14.04"
+      output = sp.getstatusoutput(cmd)
+      print(output)
+      
+      
+      if we run the file for the second time it produce error since the os1 name should be different for every container
+      
+      to make the os name dynamic we use format function 
+      
+      
+      docker stop os1  - command to stop the container
+      
+      to run the docker in detach mode we add  -d option while launching
+      
+      install httpd webserver 
+        yum install httpd -y 
+        systemctl start httpd
+        
+       cd var/www/cgi-bin/
+       
+            vim drun.py
+            
+            
+                  #!/usr/bin/python3
+                  print("content_type:text/html")
+                  print()
+                  import subprocess as sp
+                  import cgi
+                  form = cgi.FieldStorage()
+                  osname = form.getvalue(x)       # here x value is taken as input from server page
+                  cmd = "docker run -dit --name {}  ubuntu:14.04".format(osname)
+                  output = sp.getstatusoutput(cmd)
+                  print (output)
+                  
+                  
+                  
+                  
+        cd /var/www/html/
+        
+              drun.html
+              
+              
+                    <form action = "any url to redirect" >
+                    
+                      Enter ur osname : <input type = "text"  name = "x"   />
+                      <input type = "submit" />
+                   </form>
+                   
+                   
+                   
+                  
+                  
