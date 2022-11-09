@@ -52,5 +52,63 @@ gedit docker.py
                    
                    
                    
+
+when we run the above files it gives error because of the firewall and permissions 
+      
+      to avoid firewall we use   setenforce 0 
+      
+      but in permissions  
+      Bydefault only a root user can able to install libraries and start the services 
+      but to provide the access  to other users we configure the sudoers file
+      
+      
+      vim /etc/sudoers
+                  apache   ALL=(ALL)      ALL
                   
                   
+    And add   sudo to the commands to run from root user 
+    
+    
+    
+    
+        install httpd webserver 
+        sudo yum install httpd -y 
+        sudo  systemctl start httpd
+        
+       cd var/www/cgi-bin/
+       
+            vim drun.py
+            
+            
+                  #!/usr/bin/python3
+                  print("content_type:text/html")
+                  print()
+                  import subprocess as sp
+                  import cgi
+                  form = cgi.FieldStorage()
+                  osname = form.getvalue(x)       # here x value is taken as input from server page
+                  cmd = "sudo docker run -dit --name {}  ubuntu:14.04".format(osname)
+                  output = sp.getstatusoutput(cmd)
+                  print (output)
+                  
+    
+                  
+                  
+                  
+                  
+    cd /var/www/html/
+        
+              drun.html
+              
+              
+                    <form action = "any url to redirect" >
+                    
+                      select ur osname :
+                      <select>
+                                  <option>ubuntu:14.04</option>
+                                  <option>centos</option>
+                      </select>
+                        
+                      <input type = "submit" />
+                   </form>
+                   
