@@ -1,0 +1,33 @@
+
+Every function is a reference in which it store all its statements
+
+
+
+  def a() :
+    while True :
+      print("aaaaa")
+      
+      
+   def b() :
+      while True :
+        print("bbbbbb")
+        
+ when we call  both functions  
+ 
+ a()
+ b()
+ 
+ function b runs only after the a run and produce output
+ 
+ 
+ Module is the program file which contains code and while using the module we should provide its namespace 
+      ex :  while using read property of pandas we write    pandas.read()  where the namespace pandas is used before the read
+      
+ 
+ 
+ when we create a module it aquire many properties such as   .__name__    ,  .__main__
+ 
+ 
+ when we create a custom module  it should be copied in     /usr/lib64/python3.6
+ 
+    so this module can be run from any path
