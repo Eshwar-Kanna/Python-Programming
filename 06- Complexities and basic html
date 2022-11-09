@@ -1,0 +1,36 @@
+Space Complexity :  The space used by the process in the ram for the execution of particular code 
+Time Complexity  :  The Time Taken by the CPU to run the process and produce Output 
+
+Higher the Space Complexity higher the Time complexity
+
+STATIC  : A program that provide fixed output
+DYNAMIC : A program that provide Output according to our choice
+
+Fieldstorage()  :  it is a function used for asking the input from the client during the run time
+
+HTML  is the language that used for creating the server page
+
+the Attributes are parameters of HTML
+
+<b>...</b>    , <u>.....</u> ,  <p>.....</p>  , </br>  , <form>....</form> , <title>.....</title>    , <header>....</header> ,
+<a>....</a>  , <input   type = "text"  /> , types of input   1. text  2. password  3.radio 4. checkbox 5.submit , 
+<button>.....</button>
+
+
+Difference B/w   radio and checkbox    
+      radio overwrite the var value in which it stores only one value  but check box will store the list of values that we select 
+
+
+
+usage format of  Fieldstorage in code
+        import cgi
+         y = Fieldstorage()
+         o = y.getvalue(x)
+         print(o)
+         
+         
+   import subprocess
+   subprocess.getoutput()  used to convert string to command     similar to os.system    but  os.syatem cannot return the output 
+   to use in other functions for such usecase we use subprocess
+   
+   
