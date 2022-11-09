@@ -1,0 +1,54 @@
+
+
+for loop is used to run or operate one after  another  till end
+  
+          ex :
+                x = [1,2,3,,4,5,6,7]
+                for i in x :
+                    print(i)
+                    
+            ex:
+            
+                y = []
+                for j in x :
+                j = i*i
+                y.append(j)
+                
+                
+                
+       Readability  :   using inline approach  
+            m = [i*i  for i  in  x ]
+            n = [i*i  for i in x  if i>0 ]
+            p = [i*i  if i>0  else 0  for i  in x ]
+            
+            
+      Function   and Module
+      
+          def  kanna() :
+              print("hiii")
+              print("hello")
+              
+              
+        to call this function use     kanna()
+        
+     def sum(a,b)
+          x = a                                             here  a,b are parameters    and we can only use two numbers as input
+          y = b
+          m = x+y
+          print(m)
+          
+          
+     def sum(*i)
+     
+            m = 0
+            for j in i :
+              m = m + j 
+              print(m)
+          
+          
+          but to provide outpur when we call function   use return m  instead   print(m)
+          
+          
+          we can assign the function to a variable   
+                        x = sum 
+       
