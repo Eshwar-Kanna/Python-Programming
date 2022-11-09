@@ -1,0 +1,42 @@
+
+
+                                        Human vs Machine 
+
+
+b = []
+import numpy 
+numpy.array(b)
+b.max()
+b.sum()
+b.mean()
+
+
+
+
+to retrieve data from column wise we use array where list doesnot support for the same
+
+kanna = [["one" , 1 , "first"] , [ "two" , 2 , "second" ] , ["three" , 3 , "third"]]
+
+numpy.array(kanna)
+
+kanna.shape
+kanna[: : , :]
+
+
+datatype of an array  is u(flexible  type)
+
+a = kanna.int   -> converts u to integer
+
+bydefault the array gives the column numbers as 0,1,2,.......   but to specify names   we use Dictionaries
+
+dict = {"names" : ["studentname" , "phone" , "remarks" ] , "formats" : [ numpy.str , numpy.int32 , numpy.int32]}
+
+
+pandas is the library created based on numpy 
+dir(pandas)   -> it gives all the features of pandas can be used 
+
+
+using pandas we read csv file 
+
+var.iloc[row , column]  - gives the value in data
+
