@@ -1,0 +1,53 @@
+
+
+Kernel is the resource of OS that connects software and Hardware and this will provide the PID
+
+ps -aux    :  to list all processes running in OS
+
+PID works as Directory  for particular process 
+
+terminating a process means killing the PID
+
+cd /proc/    - this is the folder where we get all the PID's
+
+When we run the code each statement of code is sent to the process and process send single process to the CPU  thus cpu 
+  run the processes  one after another  here each process is known as single Thread
+
+
+run gedit status  from any PID   their it provide the threading type
+
+To run multiple threads in parallel  we import threading
+
+we can able to open multiple tabs in the browser only because of Multi threading
+
+
+
+     
+      
+   1.   def a() :
+        while True :
+          print("aaa")
+                                        here the output will be only  a  since this process will not end and b runs only after a
+      def b():
+        while True :
+          print("bbbb")
+          
+          
+          
+  2.   import threading
+       
+       
+      def a() :
+        while True :
+          print("aaa")
+                                        here the output will be   a and b  in parallel  
+      def b():
+        while True :
+          print("bbbb")
+       x1 = threading.Thread(target = a)
+       x2 = threading.Thread(target = b)
+       
+       x1.start()
+       x2.start()
+       
+       here it will be three threads  1 is x1 , 2 is x2  and 3 is the complete code
