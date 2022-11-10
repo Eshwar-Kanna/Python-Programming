@@ -1,0 +1,81 @@
+
+
+        ---------------------------       Exception or Error Handling     -------------------
+
+
+
+try  ; except ; finally   are the keyword we use in exceptional Handling
+
+we can also use try inside try   : nested
+
+syntax to use the try is
+
+          try :
+            <write code >
+          
+          except <type of error> (SyntaxError) :
+                print ("check the syntax")
+                
+          finally :
+              print ("the code ended")
+          
+          
+ finally will run all the time the code run
+ 
+ types of error :   SyntaxError , ValueError , NameError
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ ---------------------------------          File Handling     ---------------------------
+ 
+ 
+ 
+ EOL  ( End Of Line )   
+ 
+                  this is used to specify that  end character of the line
+                        
+                        in windows   we use      \r\n
+                        in linux     we use       \n
+                        
+                        
+  EOF  (End Of Line )
+                         this is used to specify that the end character of File
+                         
+                         
+                         
+  cat  >>  index.html
+  
+            add data 
+            
+            press ctrl + d to save 
+            
+ f = open("index.txt"  , mode = 'r' )
+ by giving the mode of r ie.read  we can only read the data but cannot update 
+ 
+ f.read()  , f.tell() , f.close()           are the functions we can use 
+ 
+ change the mode to  w from r   to give update or write acees to the file
+ 
+ f = open("index.txt"  , mode = 'w' )
+      f.write()   can also work here
+      
+      
+ f.write()    keeps adding the data untill we close the function   . the updated data can be seen only after closing the function 
+ 
+ f.seek()  is the function used to point the curser  at desired position
+ 
+ f.seek(5,0)  : this place the curser at 5th position starting from 0th position
+ 
+ to give read and write access to the file we use mode  as     r+
+ 
+ 
+ but when we enable the mode as r+ for non exixring file or new file this command fail   but to provide read and write access to the 
+          file by creating it  if not exist   we use  mode    w+
+          
+          
+      
+ 
