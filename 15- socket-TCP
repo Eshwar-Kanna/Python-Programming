@@ -1,0 +1,39 @@
+when we use TCP  protocol
+
+whenever multiple clients connect to single server the server create connection individually for each client and respond accordingly 
+
+netstat -nct  : to monitor the live connections
+
+we specify ip  as null in receiver server to access all ip's  
+
+      server code
+      
+            import socket
+            import threading
+            s = socket.socket()
+            s = setsockopt( SOCKET.SOL_SOCKET , socket.SO_RESUSEADDR , 1)
+            ip = ""
+            port = 2222
+            s.bind((ip , port))
+            s.listen()
+            def kanna( csession , addr ):
+              csession.send(b"i m server")
+              data = csession.recv(100)
+              
+            while True :
+                csession , addr = s.accept ()
+                t1 = threading.Thread(target = kanna , args = (csession , addr))
+                t1.start()
+                
+                
+                
+ 
+ 
+ Client code 
+          import socket
+          s = socket.socket()
+          serverip = "192.168.0.2"
+          serverport = 2222
+          s.connect((serverip , serverport))
+          print(s.recv(100))
+          
