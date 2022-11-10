@@ -1,0 +1,150 @@
+
+
+=>  each customer or each item of a dataset is known as object
+
+=> retrieving data from one instance to another like parent class to child class is known as inheritance
+
+=> Instantiation : the format or pattern of each object 
+
+=> instance :  the entire data or the hard copy of each object
+
+=> IN the method or function,  we always give self as  attribute, to specify the address of object ,from where the data should be 
+    retrieved 
+    
+=> constructor is the method or function that run automatically when the new object is created
+
+
+
+
+
+                              class Visitorform :
+                                  def __init__(self , phone , name) :
+                                      self.myname = name 
+                                      self.myphone = phone
+                                      print("this is the constructor")
+                                   def get_phone(self) :
+                                        print("you can contact me at :" , self.myphone)
+                                        
+                                   def get_name(self) :
+                                        print (" are you searching for : " , self.name)
+                                        
+                                        
+      to call the functions 
+      
+                    tom = Visitorform(2222 , "tom")
+                    
+                    tom.get_name()
+                    tom.get_phone()
+                    
+                    
+                    
+                    
+ To create a variable that can be used by all the instances which  are said to be global variable we have to create on the top not including 
+      in any method but  in a class
+      
+ 
+ we use child class inherited with parent class to access all the attribute and functions of parent and can update any function by using
+        it in the child class which is known as Methd Overriding
+        
+ 
+ 
+              class Visitor :
+              
+                    country = "IN"
+                    no_of_count = 0
+                    
+                    def __init__(self , n,l,p ) :
+                          self.firstname = n
+                          self.lastname = l
+                          self.phone = p
+                          visitor.no_of_count += 1
+                    def ret_phone(self) :
+                        return  "my phone number is : " + self.phone
+                        
+                    def ret_fullname(self) :
+                         return "my fullname :" + self.firstname + "" + self.lastname
+                        
+                     def ret_role(self) :
+                          self.role = "visitor"
+                          return "iam " + self.role
+                        
+                        
+              class Employ (Visitor) :
+                  def ret_role(self) :
+                     self.role = "employ"
+                     return "iam " + self.role
+                        
+                        
+                     
+                     
+                     
+       eric = Visitor(.......)
+       then  eric.ret_role()   gives  visitor
+       
+       bob = Employ(.......)
+       then bob.ret_role()     gives employ
+       
+       
+       
+       
+  if their is a requirement of using constructor in child class it overwrite the parent class if we use constructor in child class 
+        so to use constructor in child class we create in reference to parent and add extraarguments to it  using super() function
+        
+        
+ TYPES OF METHODS 
+ 
+ 
+ 1. Instance Method
+        The method in which we pass the address of the intance     ;  self
+        
+        
+  2. Class Method 
+        The methos in which we pass the address of the class       ; any arguments such as cls in class
+        
+  3. Static Method
+        The method in which no  address is passed     
+        
+        
+        
+        
+              
+              class Visitorform :
+              
+                      region = "IN"
+                      
+                   def __init__(self , f,l,m) :
+                      self.firstname = f 
+                      self.lastname = l
+                      self.mobile = m
+                      
+                    @classmethod
+                    def get_region(cls) :
+                          return cls.get_region
+                          
+                    @classmethod 
+                    def set_region(cls , nregion) :
+                        self.newregion = nregion
+                        
+                     def full_name(self) :
+                       return self.firstname  + self.lastname
+        
+            
+                    @staticmethod
+                    def today() :
+                        return "today is monday "
+                        
+                        
+                        
+          class Employ(Visitorform) :
+                super().__init__(self,f , l , m , title ) :
+                      self.job = title
+                      
+                 def get_title(self) :
+                      return self.job
+                      
+                 def set_title(self , newjob) :
+                      self.job = newjob
+                      return self.job
+                     
+                    
+      
