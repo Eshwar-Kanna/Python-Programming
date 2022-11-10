@@ -1,0 +1,42 @@
+
+
+The protocol that is used for trasferring the data through network should be supported by both OS to transfer 
+
+UDP send the data to client even if  the client server is offline which is not secure
+
+Remote Execution (ssh , Telnet )  is the process in which the data sent remotely used for as command and execute
+
+      ex :    using system function      -   os.system("date")
+      
+      
+      but in the servers like Google  we have one server but millions of client . in that case   the data will be sent from 
+        million  clients  to same server
+        
+     To receive the data in parallel , from the clients   we required Multi Threading which is known as parallelism
+     
+     
+     sock_DGRAM  is used for UDP protocol
+     
+     
+              code in server   
+              
+                    import socket 
+                    s = socket.socket(socket.AF_INET , socket.sock_DGRAM)
+                    ip = "192.168.0.12"
+                    port = 1234
+                    s.bind((ip,port))
+                    while True :
+                      x = s.recvfrom(10)
+                      clientip = x[1][0]
+                      data = x[0].decode()
+                      print(clientip  + ":" + data)
+                      
+                      
+                      
+                      
+                 code in client 
+                 
+                    import socket
+                    s = socket.socket(socket.AF_INET , socket.sock.DGRAM)
+                    data = b"firefox"
+                    s.sendto(data , (192.168.0.12 , 1234))
