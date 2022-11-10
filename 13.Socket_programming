@@ -1,0 +1,32 @@
+
+
+recvfrom()  is the function similar to input()  but we use when the input is taken from remote system through network such as SSH
+
+to connect any of the program running in other OS through network   we connect to port number
+
+          netstat  -tnlp     to see the processes or programs running on port number
+          
+          
+   thing to be done for running socket program 
+           
+          
+import  socket
+
+find  IP
+find  PORT
+
+bind ip and port 
+
+specify the protocol
+
+
+
+Mostly we have two protocols  to send data  through network
+
+1. TCP   ->  connection oriented
+2. UDP   ->  connectionless
+
+Bydefault the data will be in string format but when we send data to the remote os it only accept the bytes data
+
+    to convert str data to  bytes data   we use a property called .encode()
+      ex ;   "hello"  will be string      , "hello".encode()    becomes bytes data  
